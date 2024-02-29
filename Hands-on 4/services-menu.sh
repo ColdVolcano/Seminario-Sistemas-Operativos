@@ -1,9 +1,9 @@
 #!/usr/bin/bash
-echo "Elige una opción:"
-ops=("Listar contenido" "Crear archivo de texto" "Comparar archivos de texto" "Ver uso de awk" "Ver uso de grep" "Salir")
-select op in "${ops[@]}"
+PS3="Elige una opción: "
+opts=("Listar contenido" "Crear archivo de texto" "Comparar archivos de texto" "Ver uso de awk" "Ver uso de grep" "Salir")
+select opt in "${opts[@]}"
 do
-  case "$op" in
+  case "$opt" in
     "Listar contenido")
       echo "Ingresa la ruta"
       read path
@@ -31,6 +31,8 @@ do
     "Ver uso de grep")
       grep --help
       break
+    ;;
+    "Salir") break 2
     ;;
     *) echo "Opción no reconocida"
   esac

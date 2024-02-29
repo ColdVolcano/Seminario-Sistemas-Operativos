@@ -21,7 +21,7 @@ do
       read fileA
       echo "Ingresa el nombre del segundo archivo"
       read fileB
-      grep -f $fileA $fileB
+      diff $fileA $fileB
       break
     ;;
     "Ver uso de awk")

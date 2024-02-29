@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 echo "Elige una opción:"
 ops=("Listar contenido" "Crear archivo de texto" "Comparar archivos de texto" "Ver uso de awk" "Ver uso de grep" "Salir")
-select op in "${op[@]}"
+select op in "${ops[@]}"
 do
   case "$o" in
     "Listar contenido")
